@@ -4,9 +4,26 @@ output: html_document
 date: "2024-05-15"
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+Inicialmente voy a llamar los paquetes que quiero usar en la clase
+##no puedo comentar adentro
+```{r, EVAL= TRUE, echo= TRUE, message= FALSE}
+require(pacman)
+p_load(rio, tidyverse, mapview, osmdata, tmaptools)
+
+
+##data
+casa <- geocode_OSM("Universidad de los Andes", as.sf=T)
+
 ```
+
+A continuación voy a pintar el objeto `r casa$query`
+
+```{r}
+mapview(casa)
+
+```
+
+## todo lo de abajo eduard lo borro
 
 ## R Markdown
 
